@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopwala</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="shopwala.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="icon" href="img/logo1.png" style="border-radius : 50% ;">
+  </head> 
+ 
+  <body>
+    <div class="navbar">
+      <div class="logo">
+      <img src="img/logo1.png" height="45" width="45"></img>Shopwala</div>
+ 
+    <div class="search-bar">
+      <input type="text" placeholder="Search Items">
+      <i class="fas fa-search"></i>
+    </div>
+
+    <div class="nav-icons">
+
+      <div class="account-section" onclick="toggleAccountBox()"><div><div class="nav-icons-circle"><i class="fas fa-user"></i></div>
+      Account</div>
+      <!--   <div class="account-box" id="accountBox">
+        <p><a href="#">Login</a></p>
+        <p><a href="#">Sign Up</a></p>
+      </div>      -->
+      </div>
+
+      <div><div class="nav-icons-circle"><i class="fas fa-shopping-cart"></i></div>Cart</div>
+
+      <div><div class="nav-icons-circle"><i class="fas fa-store"></i></div>Sell items</div>
+    </div>
+    
+  </div>
+
+
+  <div class="front-menu">
+     <div class="items"><div class="item-image"><img src="img/women.png"></div><div class="item-label">Women</div></div>
+     <div class="items"><div class="item-image"><img src="img/men.png"></div><div class="item-label">Men</div></div>
+     <div class="items"><div class="item-image"><img src="img/grocery.png"></div><div class="item-label">Grocery</div></div>
+     <div class="items"><div class="item-image"><img src="img/beauty.png"></div><div class="item-label">Beauty</div></div>
+     <div class="items"><div class="item-image"><img src="img/footwear.png"></div><div class="item-label">Footwear</div></div>
+     <div class="items"><div class="item-image"><img src="img/furniture.png"></div><div class="item-label">Furniture</div></div>
+     <div class="items"><div class="item-image"><img src="img/mobile.png"></div><div class="item-label">Mobile</div></div>
+     <div class="items"><div class="item-image"><img src="img/appliances.png"></div><div class="item-label">Appliances</div></div>
+  </div>
+
+  <div class="offer-slider">
+    <button class="nav prev" onclick="prevSlide()">&#10094;</button>
+    <div class="offer-banners" id="offer-banners">
+    <img src="img/offer-1.png" class="slide"> 
+    <img src="img/offer-2.png" class="slide">
+    </div>
+    <button class="nav next" onclick="nextSlide()">&#10095;</button>
+
+    <div class="dots" id="dots"></div>
+ </div>
+
+<div class="footer">
+
+  <div class="about">
+   <div class="logo">
+      <img src="img/logo1.png" height="45" width="45"></img>Shopwala</div>
+      <p>Your one-stop online store for everything you need - from daily essentials to exclusive deals. Hassle-free Delivery to Home.</p>
+    </div>
+
+  <div class="products">
+    <p class="footer-titles">Products</p>
+    <ul class="footer-lists">
+      <li>Women</li>
+      <li>Men</li>
+      <li>Grocery</li>
+      <li>Beauty</li>
+      <li>Footwear</li>
+      <li>Furniture</li>
+      <li>Mobile</li>
+      <li>Appliances</li>
+    </ul>
+  </div>
+
+  <div class="contact-connect">
+    <div class="connect">
+       <p class="footer-titles">Connect Us : </p>
+       <i class="fab fa-instagram"></i>
+       <i class="fab fa-youtube"></i>
+       <i class="fab fa-whatsapp"></i>
+       <i class="fab fa-twitter"></i>
+    </div>
+
+    <div class="contact">
+      <p class="footer-titles">Contact Us</p>
+      <ul class="footer-lists">
+        <li> Email : shopwala@gmail.com </li>
+        <li> Ph no. : 0495732123 </li>
+        <li> Address : Mayurvihar, New Delhi, 450333</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  <script src="shopwala.js"></script>
+  </body>
+</html>
