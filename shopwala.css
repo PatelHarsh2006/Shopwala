@@ -53,7 +53,7 @@
 
 
 .search-bar input {
-  width: 94%;
+  width: 100%;
   padding: 10px 40px 10px 15px ;
   border: 1px solid #ccc;
   border-radius: 30px;
@@ -61,7 +61,7 @@
 
 .search-bar i{
   position: absolute;
-  right: 50px;
+  right: 4%;
   top: 50%;
   transform: translateY(-50%);
   color: gray;
@@ -136,35 +136,7 @@
     padding: 50px 110px;
     
 }
- /*
-  ----------------------
-|   Responsive Website   |
-  ---------------------- 
- */
 
- @media (min-width : 768px) and (max-width : 1024px){
-
-     .front-menu {
-      width: 100%;
-     }
-
-     .offer-slider{
-      width: 100%;
-     }
- }
-
- @media (min-width : 350px) and (max-width : 767px){
-
-     .front-menu {
-      width: 100%;
-      max-width: 100%;
-      margin: auto;
-     }
-
-     .offer-slider{
-      width: 100%;
-     }
- }
 
 .items {
   display: flex;
@@ -364,3 +336,56 @@
 }
 
 
+
+
+
+ /*
+  ----------------------
+|   Responsive Website   |
+  ---------------------- 
+ */
+
+ @media (min-width : 768px) and (max-width : 1024px){
+
+     .front-menu {
+      width: 100%;
+     }
+
+     .offer-slider{
+      width: 100%;
+     }
+
+
+ }
+
+ @media (min-width : 350px) and (max-width : 767px){
+
+     .front-menu {
+      width: 100%;
+      margin: 160px auto;
+      column-gap: 50px;
+      row-gap: 70px;
+     }
+
+     .offer-slider{
+      width: 100%;
+     }
+ 
+    .navbar{
+     padding: 30px 20px;
+     gap: 6%;
+    }
+
+    .item-image img {
+      height: 200px !important;
+      width: 200px !important;
+    }
+
+    .nav-icons div{
+      font-size: 23px;
+    }
+
+    .nav-icons{
+      gap:29px;
+    }
+ }
