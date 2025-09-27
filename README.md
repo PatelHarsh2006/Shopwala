@@ -7,9 +7,11 @@
 ## 📸 Website Preview
 
 ### 🏠 Homepage
-![Shopwala Homepage](<img width="1887" height="916" alt="image" src="https://github.com/user-attachments/assets/8869aea4-c6d3-4777-8563-48ecf554ce6d" />
+Shopwala Homepage :
+<img width="1887" height="916" alt="image" src="https://github.com/user-attachments/assets/8869aea4-c6d3-4777-8563-48ecf554ce6d" />
 
-![Products Page](<img width="1880" height="915" alt="image" src="https://github.com/user-attachments/assets/70cddb68-f196-42f4-9141-51cd0fb35956" />)
+Products Page :
+<img width="1880" height="915" alt="image" src="https://github.com/user-attachments/assets/70cddb68-f196-42f4-9141-51cd0fb35956" />
 
 
 
