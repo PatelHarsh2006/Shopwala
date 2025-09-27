@@ -63,3 +63,30 @@ function updateDots(){
 
 createDots();
 updateSlider();
+
+const openBtn = document.getElementById('openNav');
+const closeBtn = document.getElementById('closeNav');
+const sideNavbar = document.getElementById('sideNavbar');
+const overlay = document.getElementById('overlay');
+
+openBtn.addEventListener('click', ()=> {
+     sideNavbar.classList.add('open') ;
+     overlay.classList.add('show') ;
+
+});
+
+closeBtn.addEventListener('click', ()=>{
+     sideNavbar.classList.remove('open');
+     overlay.classList.remove('show');
+});
+
+document.addEventListener('click' , (e)=> {
+   if (
+    sideNavbar.classList.contains('open') &&
+    !sideNavbar.contains(e.target) &&
+    !openBtn.contains(e.target)
+   ){
+    sideNavbar.classList.remove('open');
+    overlay.classList.remove('show');
+   }
+});

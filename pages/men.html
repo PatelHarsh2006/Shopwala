@@ -30,18 +30,27 @@
   </head> 
  
   <body>
+    <div class="nav-mobile">
     <div class="navbar">
-      <div class="logo">
-      <a href="/index.html"><img src="/img/logo1.png" height="45" width="45"></img>Shopwala</div></a>
 
-    <div class="menu-bar">
+       <div id="openNav" class="nav-collapse-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="logo">
+      <img src="/img/logo1.png"></img>Shopwala</div>
+    
+      <div class="menu-bar">
         <a href="/index.html"><div class="menu-item">Home</div></a>
         <a href="/pages/women.html"><div class="menu-item">Women</div></a>
         <a href="/pages/men.html"><div class="menu-item">Men</div></a>
-        <a href="/pages/grocery.html"><div class="menu-item">Grocery</div></a>
-        <a href="/pages/mobile.html"><div class="menu-item">Mobile</div></a>
+        <a href="/pages/women.html"><div class="menu-item">Grocery</div></a>
+        <a href="/pages/women.html"><div class="menu-item">Mobile</div></a>
 
     </div>
+    
     <div class="search-bar">
       <input type="text" placeholder="Search Items">
       <i class="fas fa-search"></i>
@@ -51,14 +60,45 @@
 
       <div class="account-section" onclick="toggleAccountBox()"><div><div class="nav-icons-circle"><i class="fas fa-user"></i></div>
       Account</div>
-      </div>
+      <!--   <div class="account-box" id="accountBox">
+        <p><a href="#">Login</a></p>
+        <p><a href="#">Sign Up</a></p>
+      </div>      -->
+      </div> 
 
       <div><div class="nav-icons-circle"><i class="fas fa-shopping-cart"></i></div>Cart</div>
 
-      <div><div class="nav-icons-circle"><i class="fas fa-heart"></i></div>Saved</div> 
+      <div><div class="nav-icons-circle"><i class="fas fa-heart"></i></div>Saved</div>
+
     </div>
-    
   </div>
+   <div class="search-bar-mobile">
+      <input type="text" placeholder="Search Items">
+      <i class="fas fa-search"></i>
+    </div>
+  </div>
+  
+    <!-- side navbar -->
+     
+       <div id="overlay" class="overlay-side-nav"></div>
+
+      <div id="sideNavbar" class="side-navbar">
+          <div class="side-navbar-elements">
+             <a href="/index.html"><div class="menu-item">Home</div></a>
+             <a href="/pages/women.html"><div class="menu-item">Women</div></a>
+             <a href="/pages/men.html"><div class="menu-item">Men</div></a>
+             <a href="/pages/women.html"><div class="menu-item">Grocery</div></a>
+             <a href="/pages/women.html"><div class="menu-item">Mobile</div></a>
+             <a href="/pages/beauty.html"><div class="menu-item">Beauty</div></a>
+             <a href="/pages/footwear.html"><div class="menu-item">Footwear</div></a>
+             <a href="/pages/furniture.html"><div class="menu-item">Furniture</div></a>
+             <a href="/pages/appliances.html"><div class="menu-item">Appliances</div></a>
+          </div>
+          <div id="closeNav" class="navbar-close-btn">&times;</div>
+      </div>
+
+   <!-- side navbar over -->
+
 
 
 <!-- content -->
@@ -225,10 +265,10 @@
   <div class="contact-connect">
     <div class="connect">
        <p class="footer-titles">Connect Us : </p>
-       <i class="fab fa-instagram"></i>
+       <div><i class="fab fa-instagram"></i>
        <i class="fab fa-youtube"></i>
        <i class="fab fa-whatsapp"></i>
-       <i class="fab fa-twitter"></i>
+       <i class="fab fa-twitter"></i></div>
     </div>
 
     <div class="contact">
@@ -243,6 +283,6 @@
 </div>
 </div>
 
-  <script src="shopwala.js"></script>
+  <script src="/shopwala.js"></script>
   </body>
 </html>

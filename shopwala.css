@@ -14,20 +14,68 @@ body {
 }
 
 .navbar {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 7%;
+   width: 100%;
+}
+
+.side-navbar{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    background-color: white;
+    z-index: 100000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+.side-navbar.open{
+    transform: translateX(0);
+}
+
+.overlay-side-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 101vh;
+    width: 101vw;
+    background-color: #ffffff00;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 100000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease ;
+}
+.overlay-side-nav.show{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.nav-mobile{
    left: 0;
    top: 0;
    position:fixed;
    width: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: flex-start;
+   z-index: 10000;
    background-color: rgb(244 8 226 / 63%);  
       /*  Orignal-pink : rgb(218, 68, 207)  */
       /*  Purple Color --> rgb(160, 21, 202);  */
    backdrop-filter: blur(10px);
    padding: 20px 20px;
-   gap: 7%;
-   z-index: 10000;
+   display: flex;
+   flex-direction: column;
+}
+
+.search-bar-mobile{
+  display: none;
 }
 
 .menu-bar, .menu-bar a{
@@ -67,6 +115,8 @@ body {
 
 .logo img{
   border-radius: 50%;
+   height : 45px;
+   width : 45px;
 }
 
 .search-bar{
@@ -92,16 +142,17 @@ body {
   color: gray;
 }
 
-.nav-icons .nav-collapse-icon{
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      display: none;
+.nav-collapse-icon{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    display: none;
+    margin-left: 5px;
 }
-.nav-icons .nav-collapse-icon span{
-    width: 35px;
-    height: 6px;
-    background-color: white;
+.nav-collapse-icon span{
+  width: 20px;
+  height: 3px;
+  background-color: white;
 }
 
 .nav-icons {
@@ -381,13 +432,16 @@ body {
     padding-bottom: 20px;
 }
 
-.connect{
+.connect, .connect div{
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 10px;              
   margin-top: 5px;
 
+}
+.connect div{
+  margin-top: 0px;
 }
 
 .connect i{
@@ -456,15 +510,59 @@ body {
 
  /*   Phone     */
 
- @media (min-width : 350px) and (max-width : 767px){
+ @media (min-width : 300px) and (max-width : 767px){
 
     .menu-bar{
         display: none;
    }
 
+    .nav-mobile{
+     display: flex;
+     flex-direction: column;
+     padding: 11px 2px 15px;
+     max-width: 100%;
+     gap: 10px;
+    }
+
+    .side-navbar-elements{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 60px auto;
+    }
+    .side-navbar-elements a,.side-navbar-elements .menu-item{
+      font-size: 18px;
+      color: black;
+      text-decoration: none;
+    }
+
+    .search-bar{
+     display: none;
+    }
+
+    .search-bar-mobile{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    }
+
+    .search-bar-mobile input{
+     width: 95%;
+     padding: 8px 40px 8px 15px ;
+     border: 1px solid #ccc;
+     border-radius: 30px;
+   }
+
+    .search-bar-mobile i{
+     position: absolute;
+     right: 7%;
+     color: gray;
+   }
+
     .navbar{
-     padding: 50px 20px;
-     gap: 5%;
+     gap: 2%;
+     max-width: 100%;
+     position: relative;
     }
 
     .nav-icons div{
@@ -472,41 +570,52 @@ body {
     }
 
     .nav-icons{
-      gap:20px;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: 20px;
+      gap:5%;
     }
 
     .nav-icons > div {
       font-size: 0;
+      transform : translateY(+8%);
     } 
     .account-section > div {
       font-size: 0;
     } 
 
-    .nav-icons .nav-collapse-icon{
+    .nav-collapse-icon{
       display: flex;
     }
 
     .item-label{
       font-weight: 500;
-      font-size: 28px;
+      font-size: 13px;
     }
     .items{
-      gap: 20px;
+      gap: 10px;
     }
 
+    .item-image{
+      display: flex;
+      justify-content: center;
+    }
     .item-image img {
-      height: 170px !important;
-      width: 170px !important;
+      height: 84% !important;
+      width: 84% !important;
+      max-width: 130px;
+      max-height: 130px;
     }
 
     .front-menu {
       width: 100%;
-      margin: 230px 0 70px;
-      column-gap: 30px;
-      row-gap: 50px;
+      margin: 130px auto 40px;
+      column-gap: 0px;
+      row-gap: 35px;
       grid-template-columns: repeat(3, 1fr);
-      padding: 50px 25px;
+      padding: 20px 3%;
       overflow-x: hidden;
+      max-width: 610px;
      }
 
      .item-appliances{
@@ -523,56 +632,121 @@ body {
       width: 100%;
       overflow-x: hidden;
      }
- 
-     .search-bar input{
-      padding: 24px 40px 24px 15px;
-      border-radius: 120px;
-      font-size: 30px;
-     }
-
      
      .nav-icons-circle i{
-      font-size: 45px;
+      font-size: 18px;
      }
 
      .nav-icons-circle{
-      width: 80px;
-      height: 80px;
-      border: 3px solid white;
+      width: 35px;
+      height: 35px;
+      border: 2px solid white;
      }
 
-     .logo{
-      font-size: 44px;
+     .navbar .logo{
+      font-size: 20px;
+      gap: 5px;
      }
-
-     .search-bar i {
-      right: 6%;
-      font-size: 25px;
+     .navbar .logo img{
+      height : 35px;
+      width : 35px;
      }
-
     .offer-banners{
-     height: 450px;
+     height: 190px;
     }
 
     .dots button{
-     height: 20px;
-     width: 20px;
+     height: 10px;
+     width: 10px;
      margin-top: 20px;
     }
 
   .nav{
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     transform: translateY(-50%);
+  }
+
+  .footer-circle {
+    height: 40px;
+    width: 200px;
+    border-radius: 50%;
+    filter: blur(5px);
+  }
+  .circle-1{
+    bottom: -240px;
+  }
+
+  .circle-2{
+    bottom: -160px;
+    height: 40px;
+    width: 90px;
+  }
+
+  .circle-3{
+    bottom: -90px;
   }
 
   .footer{
     width: 100%;
     overflow-x: hidden;
-    padding: 50px 30px;
-    gap: 90px;
+    padding: 35px 10px;
+    gap: 6.5%;
   }
 
   .logo-footer{
-    font-size: 30px;
+    font-size: 16px;
+    gap: 5px;
   }
+  .logo-footer img{
+    width: 25px;
+    height: 25px;
+  }
+  .footer .about{
+    min-width: 30%;
+    gap: 0px;
+  }
+  .footer .about p{
+    font-size: 9px;
+  }
+  .footer-titles {
+    font-size: 12px;
+    padding-bottom: 10px;
+    padding-top: 5.5px;
+  }
+
+  .footer-lists li {
+    padding-bottom: 0px ;
+    font-size: 11px;
+  }
+
+  .contact-connect {
+    gap: 10px;
+  }
+
+  .connect{
+    gap: 0px;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+  .connect .footer-titles{
+    padding-bottom: 1px;
+  }
+
+  .connect div{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 5px;
+  }
+
+  .connect i {
+    margin-left: -1px ;
+    margin-right: 5px ;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+  }
+
+
  }
