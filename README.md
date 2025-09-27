@@ -18,7 +18,7 @@ Products Page :
 
 <img width="1880" height="915" alt="image" src="https://github.com/user-attachments/assets/70cddb68-f196-42f4-9141-51cd0fb35956" />
 
----
+<br>
 
 ## 🌟 Features
 
@@ -27,7 +27,7 @@ Products Page :
 - 🧺 View and update cart contents
 - 📱 Responsive on all devices
 
----
+<br>
 
 ## 🛠️ Technologies Used
 
